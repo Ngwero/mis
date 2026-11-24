@@ -33,7 +33,7 @@ export default async function CreditPage() {
   return (
     <div>
       <PageHeader eyebrow="Finance" title="Credit" lede="Facilities the cooperative has borrowed, products offered to smallholders, and the interest received or paid. Interest is recognised when a repayment is posted." />
-      <div className="mb-4 grid gap-3 sm:grid-cols-3">
+      <div className="mb-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <Stat label="Outstanding to members" value={ugx(outstanding)} />
         <Stat label="Interest received" value={ugx(interestIn.s)} />
         <Stat label="Interest paid on facilities" value={ugx(interestOut.s)} hint={`Spread ${ugx(interestIn.s - interestOut.s)}`} />

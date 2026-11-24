@@ -1,10 +1,17 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: { default: 'CoopMIS', template: '%s · CoopMIS' },
   description: 'Management information system for producer cooperatives.',
   robots: { index: false, follow: false },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#e7f2e2',
 }
 
 export const dynamic = 'force-dynamic'

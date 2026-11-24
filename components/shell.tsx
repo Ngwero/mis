@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { logout } from '@/lib/actions'
 import { ROLE_LABEL, type NavItem } from '@/lib/rbac'
+import { Tour } from '@/components/tour'
 
 export function Shell({
   user,
@@ -19,7 +20,19 @@ export function Shell({
 }) {
   const path = usePathname()
   const [open, setOpen] = useState(false)
+  const [tour, setTour] = useState(false)
   useEffect(() => setOpen(false), [path])
+  useEffect(() => {
+    try {
+      if (!localStorage.getItem('coopmis-tour')) setTour(true)
+    } catch {
+      setTour(true)
+    }
+  }, [])
+  function closeTour() {
+    try { localStorage.setItem('coopmis-tour', '1') } catch { /* private mode */ }
+    setTour(false)
+  }
 
   const groups: { name: string; items: NavItem[] }[] = []
   for (const item of items) {
@@ -40,6 +53,7 @@ export function Shell({
             <strong>CoopMIS</strong>
             <small>{coop}</small>
           </div>
+          <button className="sidebar-close" type="button" aria-label="Close menu" onClick={() => setOpen(false)}>Close</button>
         </div>
         <nav>
           {groups.map((group) => (
@@ -64,6 +78,7 @@ export function Shell({
               <small>{ROLE_LABEL[user.role] || user.role}</small>
             </div>
           </div>
+          <button className="btn btn-ghost tour-launch" type="button" onClick={() => setTour(true)}>Quick tour</button>
           <form action={logout}>
             <button className="btn btn-ghost w-full" type="submit">Sign out</button>
           </form>
@@ -76,6 +91,7 @@ export function Shell({
         </div>
         {children}
       </div>
+      <Tour role={user.role} open={tour} onClose={closeTour} />
     </div>
   )
 }

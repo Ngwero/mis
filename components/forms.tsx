@@ -197,7 +197,7 @@ export function ConvertForm({ batches }: { batches: { id: number; trace_code: st
           </div>
         ))}
       </div>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <button className="btn btn-ghost" type="button" onClick={() => setRows((current) => [...current, current.length])}>Add another input batch</button>
         <button className="btn btn-primary" type="submit">Post conversion</button>
       </div>

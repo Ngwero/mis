@@ -19,7 +19,7 @@ export default async function SharesPage() {
   return (
     <div>
       <PageHeader eyebrow="People" title="Shares" lede="Paid-up capital is in the ledger. An unpaid call is shown on the certificate and is not treated as cash until it is received." />
-      <div className="mb-4 grid gap-3 sm:grid-cols-3">
+      <div className="mb-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <Stat label="Members with shares" value={String(totals.members)} />
         <Stat label="Paid-up capital" value={ugx(totals.paid)} />
         <Stat label="Calls in arrears" value={ugx(totals.unpaid)} />

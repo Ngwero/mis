@@ -37,7 +37,7 @@ export default async function SalesPage() {
           { key: 'total_amount', label: 'Amount', align: 'right', render: (row) => ugx(row.total_amount) },
           { key: 'payment_status', label: 'Paid' },
           { key: 'receive', label: '', render: (row) => row.payment_status === 'unpaid' && canWrite(user.role, 'sales') ? (
-            <form action={receiveSaleAction} className="flex gap-2">
+            <form action={receiveSaleAction} className="flex flex-wrap gap-2">
               <input type="hidden" name="sale_id" value={row.id} />
               <input type="date" name="date" required className="max-w-[140px]" />
               <ModeSelect />

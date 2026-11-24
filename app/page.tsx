@@ -51,7 +51,7 @@ export default async function LoginPage() {
         <div>
           <div className="login-card">
             <h2>Sign in</h2>
-            <p className="lede">Enter your cooperative account, or open a sample role below.</p>
+            <p className="lede">Enter your cooperative account, or click a sample account below.</p>
             <div className="mt-4"><Suspense fallback={null}><Flash /></Suspense></div>
             <form action={login} className="mt-4 stack">
               <label className="field full"><span>Email</span><input name="email" type="email" autoComplete="username" required /></label>

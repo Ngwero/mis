@@ -35,7 +35,7 @@ export default async function FarmerPage({ params }: { params: Promise<{ id: str
       <PageHeader eyebrow={farmer.farmer_code} title={`${farmer.first_name} ${farmer.last_name}`} lede={`${farmer.group_name || 'No group'} · recorded by ${farmer.recorded_by || 'unknown'}`}>
         <Badge tone={statusTone(farmer.status)}>{farmer.status}</Badge>
       </PageHeader>
-      <div className="grid gap-3 sm:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <article className="card stat"><p className="stat-label">Balance due</p><p className="stat-value">{ugx(balance)}</p></article>
         <article className="card stat"><p className="stat-label">Shares paid</p><p className="stat-value">{ugx(sharePaid)}</p></article>
         <article className="card stat"><p className="stat-label">Gardens</p><p className="stat-value">{gardens.length}</p></article>
