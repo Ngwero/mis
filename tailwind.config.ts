@@ -16,8 +16,8 @@ const config: Config = {
         danger: '#8d3428',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
-        display: ['var(--font-display)', 'Georgia', 'serif'],
+        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"Segoe UI"', 'sans-serif'],
+        display: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"Segoe UI"', 'sans-serif'],
       },
       boxShadow: {
         card: '0 1px 0 rgba(28, 61, 48, 0.04)',
