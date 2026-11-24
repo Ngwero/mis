@@ -86,7 +86,7 @@ export default async function DashboardPage() {
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
               <h2 className="section-title mb-0">Delivery volume</h2>
               <div className="legend">
-                <span><i style={{ background: '#2f6bff' }} />Kilograms</span>
+                <span><i style={{ background: '#3f7a3a' }} />Kilograms</span>
                 <span><i style={{ background: '#f08a3a' }} />Amount due</span>
               </div>
             </div>
@@ -154,20 +154,20 @@ function HarvestScene() {
     <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#d7e8ff" />
-          <stop offset="100%" stopColor="#8eb6f2" />
+          <stop offset="0%" stopColor="#e4f0d8" />
+          <stop offset="100%" stopColor="#8fb56a" />
         </linearGradient>
       </defs>
       <rect width="400" height="320" fill="url(#sky)" />
       <circle cx="318" cy="64" r="28" fill="#f7f3ea" />
-      <path d="M0 168 C70 140 120 156 180 132 C250 104 300 128 400 96 L400 320 L0 320 Z" fill="#7eabe8" />
-      <path d="M0 214 C90 180 150 206 230 178 C300 156 340 176 400 150 L400 320 L0 320 Z" fill="#3d78d0" />
-      <path d="M0 268 C100 236 180 258 260 236 C320 220 360 236 400 214 L400 320 L0 320 Z" fill="#17386e" />
+      <path d="M0 168 C70 140 120 156 180 132 C250 104 300 128 400 96 L400 320 L0 320 Z" fill="#8fb56a" />
+      <path d="M0 214 C90 180 150 206 230 178 C300 156 340 176 400 150 L400 320 L0 320 Z" fill="#3f7a3a" />
+      <path d="M0 268 C100 236 180 258 260 236 C320 220 360 236 400 214 L400 320 L0 320 Z" fill="#1a3a28" />
       {[48, 108, 168, 228, 288, 348].map((x) => (
         <g key={x}>
-          <rect x={x + 8} y="188" width="4" height="28" fill="#10284e" />
-          <ellipse cx={x + 10} cy="182" rx="16" ry="18" fill="#1d4e9a" />
-          <ellipse cx={x + 4} cy="176" rx="8" ry="8" fill="#3d78d0" />
+          <rect x={x + 8} y="188" width="4" height="28" fill="#14301f" />
+          <ellipse cx={x + 10} cy="182" rx="16" ry="18" fill="#245c38" />
+          <ellipse cx={x + 4} cy="176" rx="8" ry="8" fill="#6f9a45" />
         </g>
       ))}
     </svg>

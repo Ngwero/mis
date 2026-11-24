@@ -25,7 +25,7 @@ export function ColumnChart({
         const x = pad + slot * index + (slot - barWidth) / 2
         return (
           <g key={`${item.label}-${index}`}>
-            <rect x={x} y={height - barHeight} width={barWidth} height={barHeight} rx={6} fill={index % 2 ? '#9ec0ff' : '#2f6bff'} />
+            <rect x={x} y={height - barHeight} width={barWidth} height={barHeight} rx={6} fill={index % 2 ? '#a8c98a' : '#3f7a3a'} />
             {index === 0 || item.label !== data[index - 1].label ? <text x={pad + slot * index + slot / 2} y={height + 16} textAnchor="start" fontSize="11" fill="#6d7872">{item.label}</text> : null}
           </g>
         )
@@ -45,7 +45,7 @@ export function Gauge({ value, caption }: { value: number; caption: string }) {
       <svg viewBox="0 0 150 150" role="img" aria-label={`${pct}% ${caption}`}>
         <circle cx="75" cy="75" r={radius} fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="12" />
         <circle
-          cx="75" cy="75" r={radius} fill="none" stroke="#0a4fd4" strokeWidth="12"
+          cx="75" cy="75" r={radius} fill="none" stroke="#1f4d32" strokeWidth="12"
           strokeLinecap="round" strokeDasharray={`${dash} ${circ - dash}`}
           transform="rotate(-90 75 75)"
         />
