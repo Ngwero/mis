@@ -32,17 +32,16 @@ export default async function LoginPage() {
               <small>{settings?.short_name || 'Producer cooperative'}</small>
             </div>
           </div>
-          <div>
+          <div className="login-story">
             <p className="login-kicker">Producer cooperative</p>
             <h1>Highland coffee, on the books.</h1>
             <p className="lede">
-              Member records, gardens, traceable produce, and accounts for {settings?.short_name || 'the cooperative'}.
-              This copy is a fictional society with a full {settings?.season_label || 'season'}.
+              Members, gardens, deliveries, and accounts for {settings?.short_name || 'the cooperative'}, kept together for the {settings?.season_label || 'current season'}.
             </p>
             <ul className="login-points">
-              <li>Deliveries traced from garden to sale</li>
-              <li>Office and field use the same records</li>
-              <li>Accounts that stay in balance</li>
+              <li>Every delivery can be followed from garden to sale</li>
+              <li>Office and field work from the same records</li>
+              <li>The books stay in balance</li>
             </ul>
             <p className="login-credit">Photograph by Carlos Torres. Pexels.</p>
           </div>
@@ -52,25 +51,28 @@ export default async function LoginPage() {
         <div>
           <div className="login-card">
             <h2>Sign in</h2>
-            <p className="lede">Enter your cooperative account to open the records.</p>
+            <p className="lede">Enter your cooperative account, or open a sample role below.</p>
             <div className="mt-4"><Suspense fallback={null}><Flash /></Suspense></div>
             <form action={login} className="mt-4 stack">
               <label className="field full"><span>Email</span><input name="email" type="email" autoComplete="username" required /></label>
               <label className="field full"><span>Password</span><input name="password" type="password" autoComplete="current-password" required /></label>
               <button className="btn btn-primary w-full" type="submit">Sign in</button>
             </form>
-          </div>
-          <div className="login-roles">
-            {demos.map(([name, role, email, password]) => (
-              <form key={email} action={login}>
-                <input type="hidden" name="email" value={email} />
-                <input type="hidden" name="password" value={password} />
-                <button className="btn btn-ghost h-full w-full flex-col items-start py-3" type="submit">
-                  <span>{name}</span>
-                  <span className="muted text-xs font-semibold">{role}</span>
-                </button>
-              </form>
-            ))}
+            <div className="login-samples">
+              <p>Sample accounts</p>
+              <div className="login-roles">
+                {demos.map(([name, role, email, password]) => (
+                  <form key={email} action={login}>
+                    <input type="hidden" name="email" value={email} />
+                    <input type="hidden" name="password" value={password} />
+                    <button type="submit">
+                      <span>{name}</span>
+                      <span>{role}</span>
+                    </button>
+                  </form>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -221,34 +221,46 @@ table.data tbody tr:hover { background: rgba(255, 255, 255, 0.42); }
 .login-visual-copy {
   position: relative; z-index: 1; min-height: 100vh;
   display: flex; flex-direction: column; justify-content: space-between;
-  padding: 36px 44px 40px;
-  background: linear-gradient(180deg, rgba(8, 16, 12, 0.35) 0%, rgba(8, 16, 12, 0.05) 42%, rgba(6, 14, 10, 0.78) 100%);
+  padding: 40px 52px 48px;
+  background: linear-gradient(180deg, rgba(8, 16, 12, 0.42) 0%, rgba(8, 16, 12, 0.08) 38%, rgba(6, 14, 10, 0.82) 100%);
 }
 .login-visual .brand small, .login-visual .brand strong { color: white; }
 .login-visual .mark { background: rgba(255, 255, 255, 0.92); color: #1f4d32; box-shadow: none; }
-.login-kicker { margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.82); }
-.login-visual h1 { margin: 0; max-width: 12ch; font-size: 52px; line-height: 0.98; letter-spacing: -0.04em; font-weight: 680; }
-.login-visual .lede { color: rgba(255,255,255,0.88); max-width: 42ch; }
-.login-points { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
-.login-points li { display: flex; gap: 8px; align-items: center; font-size: 14px; }
-.login-points li::before { content: ""; width: 16px; height: 16px; border-radius: 99px; background: rgba(255,255,255,0.18); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.85); }
-.login-credit { margin: 16px 0 0; font-size: 12px; color: rgba(255,255,255,0.72); }
-.login-panel { display: grid; place-items: center; padding: 32px 24px; background: #eef3ee; }
+.login-story { max-width: 460px; }
+.login-kicker { margin: 0 0 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.82); }
+.login-visual h1 { margin: 0; max-width: 11ch; font-size: 56px; line-height: 1.02; letter-spacing: -0.045em; font-weight: 680; }
+.login-visual .lede { margin-top: 18px; color: rgba(255,255,255,0.9); max-width: 38ch; line-height: 1.5; font-size: 16px; }
+.login-points { margin: 26px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.login-points li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.4; }
+.login-points li::before { content: ""; flex: 0 0 16px; width: 16px; height: 16px; margin-top: 2px; border-radius: 99px; background: rgba(255,255,255,0.18); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.85); }
+.login-credit { margin: 32px 0 0; font-size: 12px; color: rgba(255,255,255,0.7); }
+.login-panel { display: grid; place-items: center; padding: 32px 28px; background: #eef3ee; }
 .login-card {
-  width: min(420px, 100%);
+  width: min(440px, 100%);
   background: white;
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 18px 40px rgba(16, 32, 63, 0.08);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  padding: 28px;
+  padding: 32px 28px 24px;
 }
 .login-card h2 { margin: 0; font-size: 28px; letter-spacing: -0.03em; }
+.login-card .lede { max-width: none; line-height: 1.45; }
 .login-card input { background: #f4f7f2; border: 1px solid #d5e4d6; }
 .login-card .field,
 .login-card .btn-primary { grid-column: 1 / -1; }
-.login-roles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: min(420px, 100%); margin-top: 14px; }
+.login-samples { margin-top: 22px; padding-top: 18px; border-top: 1px solid #e3eee4; }
+.login-samples > p { margin: 0 0 12px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5c6e62; }
+.login-roles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; margin: 0; }
+.login-roles button {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px;
+  width: 100%; min-height: 64px; padding: 12px 14px; text-align: left;
+  border-radius: 14px; border: 1px solid #d5e4d6; background: #f4f7f2; color: #14241c;
+  font-size: 14px; font-weight: 680; cursor: pointer;
+}
+.login-roles button span:last-child { font-size: 12px; font-weight: 600; color: #5c6e62; }
+.login-roles button:hover { background: #e7f2e4; border-color: #b7d0b4; }
 .print-only { display: none; }
 .picker { max-height: 280px; overflow: auto; border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 14px; padding: 8px; background: rgba(255, 255, 255, 0.4); }
 .picker label { display: grid; grid-template-columns: 20px 1fr; gap: 8px; padding: 6px; font-size: 14px; }
